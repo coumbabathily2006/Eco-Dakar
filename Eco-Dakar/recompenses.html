@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Récompenses - EcoDakar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="recompenses">
+
+    <div class="topline">
+        EcoDakar · Donner une seconde vie au plastique, construire un Dakar plus propre
+    </div>
+
+    <header class="site-header">
+        <div class="header-inner">
+
+            <div class="brand-panel">
+                <a class="logo" href="index.html">
+                    <span class="logo-mark">♻</span>
+                    <span>EcoDakar</span>
+                </a>
+            </div>
+
+            <div class="nav-area">
+                <nav>
+                    <a href="compte.html">Mon compte</a>
+                    <a href="boutique.html">Boutique</a>
+                    <a href="sensibilisation.html">Sensibilisation</a>
+                    <a href="recompenses.html" class="active">Récompenses</a>
+                    <a href="gestion.html">Gestion</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+
+                <a class="cart-link" href="panier.html">
+                    🛒 <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="hero small">
+        <p class="eyebrow">Votre contribution compte</p>
+        <h1>Programme de récompenses</h1>
+        <p>
+            Déposez les plastiques acceptés et recevez un bon
+            de récompense selon le poids validé.
+        </p>
+    </section>
+
+    <main class="wrap">
+
+        <div class="notice">
+            <strong>Fonctionnement :</strong>
+            les plastiques sont pesés par un agent EcoDakar.
+            Après validation du poids, un bon est remis au participant
+            selon les règles du programme.
+        </div>
+
+        <h2>Exemples de paliers de récompense</h2>
+
+        <div class="grid">
+
+            <article class="card">
+                <span class="tag orange">Dès 5 kg</span>
+                <h3>Bon de récompense</h3>
+                <p>Un bon donnant droit à un savon, selon les conditions du programme.</p>
+            </article>
+
+            <article class="card">
+                <span class="tag orange">Dès 10 kg</span>
+                <h3>Bon de récompense</h3>
+                <p>Un bon pour des produits d'entretien.</p>
+            </article>
+
+            <article class="card">
+                <span class="tag orange">Dès 20 kg</span>
+                <h3>Bon de récompense</h3>
+                <p>Un bon pour des fournitures scolaires.</p>
+            </article>
+
+            <article class="card">
+                <span class="tag orange">Dès 30 kg</span>
+                <h3>Bon de récompense</h3>
+                <p>Un bon pour des produits ménagers ou un sac réutilisable.</p>
+            </article>
+
+            <article class="card">
+                <span class="tag orange">Dès 50 kg</span>
+                <h3>Bon de récompense</h3>
+                <p>Un bon pour un lot de savons.</p>
+            </article>
+
+        </div>
+
+
+        <h2>Estimer votre palier</h2>
+
+        <div class="card form-card">
+
+            <label>Poids de plastique apporté (kg)</label>
+
+            <input
+                id="kg-input"
+                type="number"
+                min="0"
+                value="10"
+                oninput="calculateReward()"
+            >
+
+            <p id="reward-result" class="notice"></p>
+
+            <small>
+                Le calculateur donne une indication.
+                Le poids définitif et le bon remis sont confirmés
+                par l'agent EcoDakar.
+            </small>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-inner">
+
+            <div>
+                <h3>EcoDakar</h3>
+                <p>Nous transformons les plastiques récupérés en poubelles utiles.</p>
+            </div>
+
+            <div>
+                <h3>Navigation</h3>
+                <a href="compte.html">Mon compte</a>
+                <a href="boutique.html">Boutique</a>
+                <a href="panier.html">Mon panier</a>
+            </div>
+
+            <div>
+                <h3>Nos engagements</h3>
+                <a href="recompenses.html">Récompenses</a>
+                <a href="contact.html#services">Nos services</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>WhatsApp : à compléter<br>E-mail : à compléter</p>
+            </div>
+
+        </div>
+
+        <p class="copyright">© 2026 EcoDakar. Tous droits réservés.</p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

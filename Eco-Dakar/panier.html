@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier et commandes - EcoDakar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="panier">
+
+    <div class="topline">
+        EcoDakar · Donner une seconde vie au plastique, construire un Dakar plus propre
+    </div>
+
+    <header class="site-header">
+        <div class="header-inner">
+
+            <div class="brand-panel">
+                <a class="logo" href="index.html">
+                    <span class="logo-mark">♻</span>
+                    <span>EcoDakar</span>
+                </a>
+            </div>
+
+            <div class="nav-area">
+                <nav>
+                    <a href="compte.html">Mon compte</a>
+                    <a href="boutique.html">Boutique</a>
+                    <a href="sensibilisation.html">Sensibilisation</a>
+                    <a href="recompenses.html">Récompenses</a>
+                    <a href="gestion.html">Gestion</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+
+                <a class="cart-link" href="panier.html">
+                    🛒 <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="hero small">
+        <p class="eyebrow">Votre sélection</p>
+        <h1>Mon panier</h1>
+        <p>
+            Vérifiez vos articles, renseignez la livraison
+            et validez votre commande au même endroit.
+        </p>
+    </section>
+
+    <main class="wrap">
+
+        <div id="cart-area"></div>
+
+        <section class="grid two">
+
+            <div class="card">
+
+                <h2>Informations de livraison</h2>
+
+                <p class="muted">
+                    Complétez les informations ci-dessous
+                    pour envoyer votre commande.
+                </p>
+
+                <label>Nom complet</label>
+                <input
+                    id="order-name"
+                    type="text"
+                    placeholder="Votre nom et prénom"
+                >
+
+                <label>Téléphone</label>
+                <input
+                    id="order-phone"
+                    type="tel"
+                    placeholder="Votre numéro de téléphone"
+                >
+
+                <label>Adresse de livraison</label>
+                <textarea
+                    id="order-address"
+                    rows="3"
+                    placeholder="Quartier, rue, indications utiles"
+                ></textarea>
+
+                <label>Mode de paiement</label>
+
+                <select id="payment">
+                    <option>Paiement à la livraison</option>
+                    <option>Wave (à confirmer avec EcoDakar)</option>
+                    <option>Orange Money (à confirmer avec EcoDakar)</option>
+                </select>
+
+                <button class="btn orange" onclick="placeOrder()">
+                    Valider ma commande
+                </button>
+
+                <p id="order-message" class="notice"></p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>Suivre une commande</h2>
+
+                <p class="muted">
+                    Entrez le numéro de téléphone utilisé lors de la commande.
+                </p>
+
+                <label>Votre téléphone</label>
+
+                <input
+                    id="track-phone"
+                    type="tel"
+                    placeholder="Numéro de téléphone"
+                >
+
+                <button class="btn" onclick="trackOrders()">
+                    Afficher mes commandes
+                </button>
+
+                <div id="tracking-results"></div>
+
+                <div class="notice warning">
+                    <strong>À savoir :</strong>
+                    cette version est un prototype local.
+                    Les commandes sont enregistrées dans le navigateur
+                    utilisé pour la démonstration.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-inner">
+
+            <div>
+                <h3>EcoDakar</h3>
+                <p>
+                    Nous transformons les plastiques récupérés
+                    en poubelles utiles, solides et accessibles.
+                </p>
+            </div>
+
+            <div>
+                <h3>Navigation</h3>
+                <a href="compte.html">Mon compte</a>
+                <a href="boutique.html">Boutique</a>
+                <a href="panier.html">Mon panier</a>
+                <a href="sensibilisation.html">Sensibilisation</a>
+            </div>
+
+            <div>
+                <h3>Nos engagements</h3>
+                <a href="recompenses.html">Récompenses</a>
+                <a href="contact.html#services">Nos services</a>
+                <a href="contact.html#faq">Questions fréquentes</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>
+                    WhatsApp : à compléter<br>
+                    E-mail : à compléter<br>
+                    Adresse : à compléter
+                </p>
+            </div>
+
+        </div>
+
+        <p class="copyright">© 2026 EcoDakar. Tous droits réservés.</p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

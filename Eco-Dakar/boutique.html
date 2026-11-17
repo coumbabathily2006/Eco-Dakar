@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Boutique - EcoDakar</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="boutique">
+
+    <div class="topline">
+        EcoDakar · Donner une seconde vie au plastique, construire un Dakar plus propre
+    </div>
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <div class="brand-panel">
+                <a class="logo" href="index.html">
+                    <span class="logo-mark">♻</span>
+                    <span>EcoDakar</span>
+                </a>
+            </div>
+
+            <div class="nav-area">
+
+                <nav>
+                    <a href="compte.html">Mon compte</a>
+                    <a href="boutique.html" class="active">Boutique</a>
+                    <a href="sensibilisation.html">Sensibilisation</a>
+                    <a href="recompenses.html">Récompenses</a>
+                    <a href="gestion.html">Gestion</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+
+                <a class="cart-link" href="panier.html" aria-label="Ouvrir le panier">
+                    🛒
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <section class="hero small">
+
+        <p class="eyebrow">La boutique EcoDakar</p>
+
+        <h1>Choisissez votre poubelle</h1>
+
+        <p>
+            Des modèles adaptés aux maisons, écoles, restaurants,
+            entreprises et espaces publics.
+        </p>
+
+    </section>
+
+
+    <main class="wrap">
+
+        <p class="section-intro">
+            Chaque catégorie contient trois modèles.
+            Les photos sont prévues dans chaque carte :
+            il suffit de déposer vos images dans le dossier
+            <strong>images/produits</strong> en respectant les noms indiqués.
+        </p>
+
+        <div class="toolbar">
+
+            <input
+                id="search"
+                type="search"
+                placeholder="Rechercher un produit..."
+                oninput="renderShop()"
+            >
+
+            <select id="category" onchange="renderShop()">
+
+                <option value="">Toutes les catégories</option>
+
+                <option>Maison
+                </option>
+                <option>École</option>
+                <option>Restaurant</option>
+                <option>Entreprise</option>
+                <option>Lieu public</option>
+
+            </select>
+
+        </div>
+
+
+        <div id="product-list"></div>
+
+        <div id="compare-box"></div>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-inner">
+
+            <div>
+                <h3>EcoDakar</h3>
+                <p>
+                    Nous transformons les plastiques récupérés
+                    en poubelles utiles, solides et accessibles.
+                </p>
+            </div>
+
+            <div>
+                <h3>Navigation</h3>
+                <a href="compte.html">Mon compte</a>
+                <a href="boutique.html">Boutique</a>
+                <a href="panier.html">Mon panier</a>
+                <a href="sensibilisation.html">Sensibilisation</a>
+            </div>
+
+            <div>
+                <h3>Nos engagements</h3>
+                <a href="recompenses.html">Programme de récompenses</a>
+                <a href="contact.html#services">Nos services</a>
+                <a href="contact.html#faq">Questions fréquentes</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>
+                    WhatsApp : à compléter<br>
+                    E-mail : à compléter<br>
+                    Adresse : à compléter
+                </p>
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 EcoDakar. Tous droits réservés.
+        </p>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

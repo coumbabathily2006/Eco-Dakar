@@ -1,0 +1,968 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ================================
+   1. VARIABLES ET BASE DU SITE
+================================ */
+
+
+:root {
+    --navy: #193d02;
+    --navy-dark: #9b3e08;
+    --orange: #090600;
+    --orange-dark: #8a2d02;
+    --white: #ffffff;
+    --white: #ffffff;
+    --teal: #438b8b;
+    --text: #243747;
+    --muted: #71808c;
+    --border: #e8e3db;
+    --soft: #fffaf3;
+    --shadow: 0 12px 35px rgba(16, 43, 67, 0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    color: var(--navy);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 55px 0 20px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 14px;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin: 15px 0 7px;
+}
+
+
+/* ================================
+   2. BARRE SUPÉRIEURE
+================================ */
+
+.topline {
+    background: var(--navy-dark);
+    color: white;
+    text-align: center;
+    padding: 9px 15px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+/* ================================
+   3. HEADER ET NAVIGATION
+================================ */
+
+.site-header {
+    background: rgb(253, 237, 237);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+    max-width: 1450px;
+    margin: auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 88px;
+    gap: 25px;
+}
+
+.brand-panel {
+    background: var(--navy);
+    padding: 17px 25px;
+    border-radius: 0 0 15px 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo-mark {
+    font-size: 27px;
+    color: #f3a36c;
+}
+
+.nav-area {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 13px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+nav a:hover,
+nav a.active {
+    color:  #8a2d02;
+}
+
+.cart-link {
+    position: relative;
+    background: var(--orange);
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: 0.3s;
+    flex-shrink: 0;
+}
+
+.cart-link:hover {
+    background: var(--navy);
+    transform: translateY(-3px);
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: var(--navy);
+    color: white;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+
+/* ================================
+   4. BANNIÈRE PRINCIPALE
+================================ */
+
+.hero {
+    background-image: url(/Eco-Dakar/image/banniere-one.jpeg);
+    color: white;
+    padding: 110px 9%;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-repeat: no-repeat;
+    height: 500px;
+    margin-left: 130px;
+    margin-top: 40px;
+    border-radius: 20px;
+    filter: blur(0.3px) brightness(0.6);
+}
+
+.hero ::before{
+content: "";
+position: absolute;
+inset: 0;
+
+}
+
+.hero h1 {
+    color: white;
+    max-width: 850px;
+    margin: 15px 0 22px;
+    text-shadow: 0 2px 8px rgba(0, 0, 10, 5);
+}
+
+.hero p {
+    color: #e1e8ed;
+    max-width: 650px;
+    font-size: 17px;
+}
+
+.hero .eyebrow {
+    color: #3703b2;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.hero.small {
+    min-height: 320px;
+    padding: 70px 9%;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+
+
+
+/* ================================
+   5. BOUTONS
+================================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 13px 23px;
+    font-weight: 700;
+    transition: 0.3s;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: var(--teal);
+    transform: translateY(-3px);
+}
+
+.btn.orange {
+    background: var(--orange);
+    color: white;
+}
+
+.btn.orange:hover {
+    background: var(--orange-dark);
+}
+
+.btn.light {
+    background: #f0e4d6;
+    color: var(--navy);
+}
+
+.btn.light:hover {
+    background: var(--orange);
+    color: white;
+}
+
+.btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* ================================
+   6. CONTENU PRINCIPAL
+================================ */
+
+.wrap {
+    max-width: 1250px;
+    margin: auto;
+    padding: 65px 25px;
+}
+
+.section-intro {
+    color: var(--muted);
+    max-width: 750px;
+    margin-bottom: 30px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e3eeee;
+    color: var(--teal);
+    padding: 6px 13px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 13px;
+}
+
+.tag.orange {
+    background: #fff0e7;
+    color: var(--orange-dark);
+}
+
+
+/* ================================
+   7. GRILLES
+================================ */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 30px 0;
+}
+
+.grid.two {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+    background: white;
+    padding: 27px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card p {
+    color: var(--muted);
+}
+
+.card h3 {
+    margin-top: 10px;
+}
+
+
+/* ================================
+   8. PRÉSENTATION DU PROCESSUS
+================================ */
+
+.flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 65px;
+}
+
+.flow-item {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    border-bottom: 4px solid var(--orange);
+    box-shadow: var(--shadow);
+}
+
+.flow-item strong {
+    display: block;
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.flow-item span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 35px;
+    align-items: center;
+    margin: 65px 0;
+}
+
+.feature-panel {
+    background: var(--navy);
+    color: white;
+    border-radius: 18px;
+    padding: 45px;
+}
+
+.feature-panel h2 {
+    color: white;
+    margin-top: 0;
+}
+
+.feature-panel p {
+    color: #d9e2e8;
+}
+
+
+/* ================================
+   9. PHOTOS DES PRODUITS
+================================ */
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+.product1-image {
+    height: 235px;
+    background: #e9e4dc;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image {
+    height: 235px;
+    background: #e9e4dc;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-image img:not([src]),
+.product-image img[src=""] {
+    display: none;
+}
+
+.product-info {
+    padding: 23px;
+}
+
+.product-info h3 {
+    margin: 8px 0;
+}
+
+.product-info p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.product-price {
+    color: var(--orange-dark);
+    font-weight: 800;
+    font-size: 19px;
+    margin: 15px 0;
+}
+
+.product-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.product-actions .btn {
+    padding: 10px 13px;
+    font-size: 12px;
+}
+
+
+/* ================================
+   10. BARRE DE RECHERCHE
+================================ */
+
+.toolbar {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.toolbar input {
+    flex: 1;
+}
+
+.toolbar select {
+    min-width: 220px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    color: var(--text);
+    outline: none;
+    margin-bottom: 12px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(67, 139, 139, 0.1);
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ================================
+   11. VIDÉO ET ÉTAPES
+================================ */
+
+.video-frame {
+    width: 100%;
+    height: 550px;
+    background: var(--navy-dark);
+    border-radius: 15px;
+    margin: 25px 0;
+}
+
+.step-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 9px;
+    margin-bottom: 18px;
+}
+
+.step-card img:not([src]),
+.step-card img[src=""] {
+    display: none;
+}
+
+
+/* ================================
+   12. NOTIFICATIONS
+================================ */
+
+.notice {
+    padding: 15px 18px;
+    border-radius: 8px;
+    background: #e5f1ed;
+    color: #28635c;
+    margin: 15px 0;
+}
+
+.notice.warning {
+    background: #fff0e3;
+    color: #99552f;
+}
+
+.notice.error {
+    background: #ffe7e7;
+    color: #a33131;
+}
+
+
+/* ================================
+   13. PANIER
+================================ */
+
+.cart-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.cart-row h3 {
+    margin-bottom: 5px;
+}
+
+.cart-quantity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cart-quantity button {
+    width: 30px;
+    height: 30px;
+    background: var(--cream);
+    border: none;
+    border-radius: 50%;
+}
+
+.cart-total {
+    background: var(--navy);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 25px;
+}
+
+.cart-total h3 {
+    color: white;
+}
+
+.cart-total p {
+    color: white;
+}
+
+
+/* ================================
+   14. COMPTES ET FORMULAIRES
+================================ */
+
+.form-card {
+    max-width: 650px;
+    margin: 30px auto;
+}
+
+.account-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.account-tabs button {
+    border: none;
+    padding: 12px 20px;
+    background: var(--cream);
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+.account-tabs button.active {
+    background: var(--navy);
+    color: white;
+}
+
+.order-card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    background: #e5f1ed;
+    color: #28635c;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* ================================
+   15. TABLEAUX DE GESTION
+================================ */
+
+.table-wrap {
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th,
+td {
+    padding: 14px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    font-size: 13px;
+}
+
+th {
+    background: var(--navy);
+    color: white;
+}
+
+td input,
+td select {
+    margin: 0;
+    min-width: 100px;
+}
+
+.management-section {
+    margin: 45px 0;
+}
+
+.management-section h2 {
+    margin-top: 20px;
+}
+
+.stat-card {
+    background: var(--navy);
+    padding: 25px;
+    border-radius: 12px;
+    color: white;
+}
+
+.stat-card h3 {
+    color: #f3a36c;
+    font-size: 30px;
+}
+
+.stat-card p {
+    color: white;
+}
+
+
+/* ================================
+   16. FAQ
+================================ */
+
+.faq {
+    margin: 30px 0;
+}
+
+.faq details {
+    background: white;
+    padding: 20px;
+    border-radius: 9px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+}
+
+.faq summary {
+    font-weight: 800;
+    color: var(--navy);
+    cursor: pointer;
+}
+
+.faq p {
+    margin-top: 15px;
+    color: var(--muted);
+}
+
+
+/* ================================
+   17. FOOTER
+================================ */
+
+.footer {
+    background: var(--navy-dark);
+    color: white;
+    padding: 60px 8% 20px;
+    margin-top: 70px;
+}
+
+.footer-inner {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+}
+
+.footer h3 {
+    color: #f3a36c;
+    margin-bottom: 18px;
+}
+
+.footer p {
+    color: #c6d0d8;
+    font-size: 13px;
+}
+
+.footer a {
+    display: block;
+    color: #dce3e8;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.footer a:hover {
+    color: #f3a36c;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin-top: 40px;
+    padding-top: 20px;
+    color: #9daebc;
+    font-size: 12px;
+}
+
+
+/* ================================
+   18. RESPONSIVE
+================================ */
+
+@media (max-width: 1050px) {
+
+    .header-inner {
+        flex-wrap: wrap;
+        padding: 15px 20px;
+    }
+
+    .nav-area {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .flow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .hero {
+        padding: 70px 25px;
+        min-height: 420px;
+    }
+
+    .hero.small {
+        padding: 55px 25px;
+    }
+
+    .wrap {
+        padding: 40px 18px;
+    }
+
+    .grid,
+    .grid.two,
+    .flow,
+    .split {
+        grid-template-columns: 1fr;
+    }
+
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .toolbar select {
+        width: 100%;
+    }
+
+    .header-inner {
+        align-items: flex-start;
+    }
+
+    .nav-area {
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cart-row {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-panel {
+        padding: 12px 17px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+}

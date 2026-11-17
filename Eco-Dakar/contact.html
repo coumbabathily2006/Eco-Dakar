@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact et services - EcoDakar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="contact">
+
+    <div class="topline">
+        EcoDakar · Donner une seconde vie au plastique, construire un Dakar plus propre
+    </div>
+
+    <header class="site-header">
+        <div class="header-inner">
+
+            <div class="brand-panel">
+                <a class="logo" href="index.html">
+                    <span class="logo-mark">♻</span>
+                    <span>EcoDakar</span>
+                </a>
+            </div>
+
+            <div class="nav-area">
+                <nav>
+                    <a href="compte.html">Mon compte</a>
+                    <a href="boutique.html">Boutique</a>
+                    <a href="sensibilisation.html">Sensibilisation</a>
+                    <a href="recompenses.html">Récompenses</a>
+                    <a href="gestion.html">Gestion</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </nav>
+
+                <a class="cart-link" href="panier.html">
+                    🛒 <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="hero small">
+        <p class="eyebrow">Nous sommes à votre écoute</p>
+        <h1>Contact & services</h1>
+        <p>
+            Une question, une demande de livraison ou un projet
+            de collecte ? Parlons-en.
+        </p>
+    </section>
+
+    <main class="wrap">
+
+        <h2 id="services">Nos services</h2>
+
+        <p class="section-intro">
+            Cette page regroupe les services proposés par EcoDakar
+            et les moyens de contacter notre équipe.
+        </p>
+
+        <div class="grid">
+
+            <article class="card">
+                <span class="tag">01</span>
+                <h3>Livraison</h3>
+                <p>
+                    Livraison des poubelles à l'adresse indiquée
+                    lors de la commande, selon les zones desservies.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="tag">02</span>
+                <h3>Assistance client</h3>
+                <p>
+                    Accompagnement pour choisir un modèle,
+                    passer une commande ou obtenir des informations.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="tag">03</span>
+                <h3>Service après-vente</h3>
+                <p>
+                    Contactez notre équipe en cas de question
+                    ou de difficulté concernant un produit reçu.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="tag">04</span>
+                <h3>Commandes personnalisées</h3>
+                <p>
+                    Écoles, restaurants, entreprises, associations
+                    et collectivités peuvent demander une proposition
+                    adaptée à leurs besoins.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="tag">05</span>
+                <h3>Collecte de plastiques</h3>
+                <p>
+                    Renseignez-vous sur les matières acceptées,
+                    les modalités de dépôt et les points de réception.
+                </p>
+            </article>
+
+            <article class="card">
+                <span class="tag">06</span>
+                <h3>Sensibilisation</h3>
+                <p>
+                    Possibilité d'échanger autour du tri,
+                    du recyclage et des actions de sensibilisation.
+                </p>
+            </article>
+
+        </div>
+
+
+        <section class="grid two">
+
+            <div class="card">
+
+                <h2>Écrivez-nous</h2>
+
+                <label>Nom complet</label>
+                <input id="contact-name" placeholder="Votre nom">
+
+                <label>Téléphone ou e-mail</label>
+                <input id="contact-detail" placeholder="Votre contact">
+
+                <label>Votre message</label>
+                <textarea
+                    id="contact-message"
+                    rows="5"
+                    placeholder="Comment pouvons-nous vous aider ?"
+                ></textarea>
+
+                <button class="btn orange" onclick="sendContact()">
+                    Envoyer le message
+                </button>
+
+                <p id="contact-result" class="notice"></p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>Nos coordonnées</h2>
+
+                <p><strong>WhatsApp :</strong> à compléter</p>
+                <p><strong>E-mail :</strong> à compléter</p>
+                <p><strong>Adresse :</strong> à compléter</p>
+
+                <p>
+                    <strong>Réseaux sociaux :</strong>
+                    TikTok, Instagram, Facebook.
+                </p>
+
+                <a class="btn" href="https://wa.me/221XXXXXXXXX">
+                    Contacter sur WhatsApp
+                </a>
+
+                <p>
+                    <small>
+                        Remplacez le numéro fictif du lien WhatsApp
+                        par le numéro officiel d'EcoDakar.
+                    </small>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <h2 id="faq">Questions fréquentes</h2>
+
+        <div class="faq">
+
+            <details>
+                <summary>Quels plastiques peuvent être déposés ?</summary>
+                <p>
+                    Le projet cible notamment le PEHD (n°2)
+                    et le PP (n°5), sous réserve des consignes
+                    communiquées par l'équipe.
+                </p>
+            </details>
+
+            <details>
+                <summary>Comment obtenir une récompense ?</summary>
+                <p>
+                    Apportez vos plastiques au point de réception.
+                    Un agent les pèse et vous remet un bon
+                    correspondant au palier validé.
+                </p>
+            </details>
+
+            <details>
+                <summary>Comment commander une poubelle ?</summary>
+                <p>
+                    Choisissez un produit dans la boutique,
+                    ajoutez-le au panier puis remplissez les informations
+                    de livraison sur la page Panier.
+                </p>
+            </details>
+
+            <details>
+                <summary>
+                    Proposez-vous des commandes pour les entreprises et les écoles ?
+                </summary>
+                <p>
+                    Oui, contactez-nous pour discuter de vos besoins
+                    et obtenir une proposition adaptée.
+                </p>
+            </details>
+
+        </div>
+
+
+        <h2>Newsletter</h2>
+
+        <div class="card form-card">
+
+            <p>
+                Recevez les actualités et les informations d'EcoDakar.
+            </p>
+
+            <input
+                id="newsletter-email"
+                type="email"
+                placeholder="Votre adresse e-mail"
+            >
+
+            <button class="btn light" onclick="subscribe()">
+                M'inscrire
+            </button>
+
+            <p id="newsletter-result" class="muted"></p>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-inner">
+
+            <div>
+                <h3>EcoDakar</h3>
+                <p>Nous transformons les plastiques récupérés en poubelles utiles.</p>
+            </div>
+
+            <div>
+                <h3>Navigation</h3>
+                <a href="compte.html">Mon compte</a>
+                <a href="boutique.html">Boutique</a>
+                <a href="panier.html">Mon panier</a>
+            </div>
+
+            <div>
+                <h3>Nos engagements</h3>
+                <a href="recompenses.html">Récompenses</a>
+                <a href="contact.html#services">Nos services</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>WhatsApp : à compléter<br>E-mail : à compléter</p>
+            </div>
+
+        </div>
+
+        <p class="copyright">© 2026 EcoDakar. Tous droits réservés.</p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
